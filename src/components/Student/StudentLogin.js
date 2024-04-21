@@ -21,7 +21,8 @@ const StudentLogin = () => {
       const response = await axios.post("/api/student/login", formData);
       console.log(response.data); // Handle success response
       // Redirect to exam page if login is successful
-      window.location.href = "/exam/options";
+      // window.location.href = "/exam/options";
+      window.location.href = "/examlink";
     } catch (error) {
       console.error(error.response.data); // Handle error response
     }

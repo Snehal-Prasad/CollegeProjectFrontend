@@ -10,11 +10,15 @@ import Welcome from "./components/Welcome/Welcome";
 import ExamOptionsPage from "./components/Exam/ExamOptionsPage";
 import MCQExamPage from "./components/MCQ/MCQExamPage";
 import Header from "./components/Header/Header";
+import ExamLink from "./components/ExamSection/ExamLink";
+import AptitudeExam from "./components/ExamSection/AptitudeExam/AptitudeExam";
+
 
 const App = () => {
   return (
     <Router>
       <Header />
+      
       <Routes>
         {/* <Route path="/" element={<Welcome />} /> */}
         <Route path="/student/signup" element={<StudentSignup />} />
@@ -23,6 +27,11 @@ const App = () => {
         <Route path="/teacher/login" element={<TeacherLogin />} />
         <Route path="/exam/options" element={<ExamOptionsPage />} />
         <Route path="/exams/:examType" element={<MCQExamPage />} />
+        <Route path="/examlink" element={<ExamLink />} />
+        <Route path="/aptitude" element={<AptitudeExam />} />
+
+        {/* <Route path="/aptitude" element={<AptitudeExam />} /> */}
+
         {/* <Route
           path="/exams/cpp/questions"
           element={<MCQExamPage examType="cpp" />}
@@ -35,3 +44,4 @@ const App = () => {
 };
 
 export default App;
+
