@@ -1,0 +1,24 @@
+.question-container {
+  margin-bottom: 20px;
+}
+
+.question-container p {
+  font-weight: bold;
+}
+
+.options-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.options-list li {
+  margin-bottom: 10px;
+}
+
+.options-list li input[type="radio"] {
+  margin-right: 10px;
+}
+
+.options-list li label {
+  cursor: pointer;
+}
