@@ -1,5 +1,8 @@
+// src/components/Student/StudentLogin.js
+
 import React, { useState } from "react";
 import "./student.css"; // Import student-specific CSS
+import axios from "axios"; // Import axios package
 
 const StudentLogin = () => {
   const [formData, setFormData] = useState({
@@ -12,10 +15,16 @@ const StudentLogin = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you can handle form submission, for example, send the data to your backend
-    console.log(formData);
+    try {
+      const response = await axios.post("/api/student/login", formData);
+      console.log(response.data); // Handle success response
+      // Redirect to exam page if login is successful
+      window.location.href = "/exam/options";
+    } catch (error) {
+      console.error(error.response.data); // Handle error response
+    }
   };
 
   return (
@@ -51,4 +60,3 @@ const StudentLogin = () => {
 };
 
 export default StudentLogin;
-
