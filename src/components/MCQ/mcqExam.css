@@ -1,0 +1,47 @@
+/* mcqExam.css */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.options {
+  list-style-type: none;
+  padding: 0;
+}
+
+.option {
+  margin-bottom: 10px;
+}
+
+.option label {
+  display: block;
+  cursor: pointer;
+}
+
+.option input[type="radio"] {
+  margin-right: 10px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
