@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./teacher.css"; // Import teacher-specific CSS
-
+import axios from "axios"; // Import axios package
 const TeacherLogin = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -12,10 +12,17 @@ const TeacherLogin = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you can handle form submission, for example, send the data to your backend
-    console.log(formData);
+    try {
+      const response = await axios.post("/api/teacher/login", formData);
+      console.log(response.data); // Handle success response
+      // Redirect to exam page if login is successful
+      // window.location.href = "/exam/options";
+      window.location.href = "/setQuestion";
+    } catch (error) {
+      console.error(error.response.data); // Handle error response
+    }
   };
 
   return (

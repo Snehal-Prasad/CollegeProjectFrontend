@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios"; // Import axios for making HTTP requests
 import "./student.css"; // Import student-specific CSS
 
 const StudentSignup = () => {
@@ -15,10 +16,19 @@ const StudentSignup = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you can handle form submission, for example, send the data to your backend
-    console.log(formData);
+    try {
+      // Make an HTTP POST request to the backend endpoint
+      const response = await axios.post(
+        "http://localhost:4000/api/student/signup",
+        formData
+      );
+      console.log("Signup successful!", response.data);
+      // Optionally, you can redirect the user or perform other actions upon successful signup
+    } catch (error) {
+      console.error("Signup failed:", error);
+    }
   };
 
   return (

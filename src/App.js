@@ -12,7 +12,8 @@ import MCQExamPage from "./components/MCQ/MCQExamPage";
 import Header from "./components/Header/Header";
 import ExamLink from "./components/ExamSection/ExamLink";
 import AptitudeExam from "./components/ExamSection/AptitudeExam/AptitudeExam";
-
+import SetQuestion from "./components/SetQuestion/SetQuestion";
+import SetAptitudeQuestion from "./components/SetQuestion/SetAptitudeQuestion/SetAptitudeQuestion";
 
 const App = () => {
   return (
@@ -29,6 +30,9 @@ const App = () => {
         <Route path="/exams/:examType" element={<MCQExamPage />} />
         <Route path="/examlink" element={<ExamLink />} />
         <Route path="/aptitude" element={<AptitudeExam />} />
+        <Route path="/setQuestion" element={<SetQuestion />} />
+        <Route path="/set-aptitude" element={<SetAptitudeQuestion />} />
+
 
         {/* <Route path="/aptitude" element={<AptitudeExam />} /> */}
 

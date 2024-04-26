@@ -1,0 +1,27 @@
+.upload-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.file-input {
+  display: inline-block; /* Display the input as an inline block */
+  margin-bottom: 10px; /* Add some spacing below the input */
+  padding: 10px; /* Add padding for better visibility */
+  background-color: #fff; /* Set background color to white */
+  border: 1px solid #ccc; /* Add a border for better visibility */
+  border-radius: 4px; /* Add border radius for better appearance */
+}
+
+.upload-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #45a049;
+}
